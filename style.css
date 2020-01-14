@@ -1,87 +1,42 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700,900&display=swap');
-
-	body {
-	font-family: Montserrat, sans-serif;
-	font-size: 15px;
-	background: hsl(240, 78%, 98%);
-	}    
-	h1 {
-	text-align: center;
-	font-family: Montserrat, sans-serif;
-	} 
-	.wrapper {
-	width: 900px;
-	margin: 5% auto;
-	}
-	.single-price {
-	width: 33%;
-	background: white;
-	float:left;
-	margin-top: 10%;
-	text-align: center;
-	box-shadow: 1px 1px 10px rgba(139, 143, 233, 0.62);
-	transition: 0.5s;
-	}
-	.price {
-	/*margin: 5% auto 0 auto;
-	text-align: center;*/
-	}
-	.deals{
-	margin-top: 10%;
-	}
-	.single-price h1{
-	color: #000000a3;
-	font-size: 15px;
-	line-height: 3;
-	}
-	.price h2 {
-	font-size: 50px;
-	margin: 0;
-	}
-	#brd {
-	border-top: 1px solid hsla(0, 0%, 50%, 0.31);
-	margin: 0 35px;
-	padding: 20px 15px;
-
-	}
-	h4.deals :hover {
-	border-bottom: 5px solid #fff;
-
-	}
-
-	.deals h4 {
-	font-size: 12px;
-	font-weight: 700;
-	text-align: center;
-	line-height: 1;
-	border-bottom: 1px solid hsla(0, 0%, 50%, 0.31);
-	margin: 0 35px;
-	padding: 20px 15px;
-	}
-	.single-price:hover {
-	background-image: linear-gradient(#8b8fe9 77%, #8b8fe994 138%);
-	color:#fff;
-	box-shadow: 0 0 5px rgb(139, 143, 233);
-	transform: scale(1,1);
-	z-index: 1;
-	border-radius: 5px;
-	margin: 8% auto;
-	padding: 17px 0px 21px 0;
-	}
-	.single-price a {
-	text-decoration: none;
-	background: #8b8fe9;
-	color: #fff;
-	display: inline-block;
-	margin: 10% auto;
-	padding: 10px 80px;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: xx-small;
-	border-radius: 5px;
-	}
-	.single-price:hover a{
-	background: #fff;
-	color: #8b8fe9;
-	}
-
+@import https://fonts.googleapis.com/css?family=Montserrat:700,900&display=swap;
+body{font-family:Montserrat,sans-serif;font-size:15px;background:hsl(240,78%,98%);background-image:url(./images/bg-top.svg);background-repeat:no-repeat;background-position:right top}
+header{padding:50px 0 0}
+.svg{background-image:url(./images/bg-bottom.svg);background-repeat:no-repeat;background-position:left bottom;padding:20% 0}
+h1{text-align:center;font-family:Montserrat,sans-serif;color:#000000a3;font-size:28px}
+.single-price:hover h1{color:#fff}
+.wrapper{width:900px;margin:-5% auto}
+.single-price{width:33%;background:#fff;float:left;margin-top:10%;text-align:center;box-shadow:1px 1px 10px rgba(139,143,233,0.62);transition:.5s}
+.deals{margin-top:10%}
+.single-price h1{font-size:15px;line-height:3}
+.price h2{font-size:50px;margin:0}
+.deals h4{font-size:12px;font-weight:700;text-align:center;line-height:1;margin:0 35px;padding:20px 15px}
+.single-price:hover{background-image:linear-gradient(#8b8fe9 77%,#8b8fe994 138%);color:#fff;box-shadow:0 0 5px #8b8fe9;transform:scale(1,1);z-index:1;border-radius:5px;margin:8% auto;padding:17px 0 21px}
+.single-price a{text-decoration:none;background:#8b8fe9;color:#fff;display:inline-block;margin:10% auto;padding:10px 80px;text-transform:uppercase;font-weight:700;font-size:xx-small;border-radius:5px}
+.single-price:hover a{background:#fff;color:#8b8fe9}
+.single-price .deals h4{border-bottom:1px solid rgba(0,0,0,0.1)}
+.single-price:hover .deals h4{border-bottom:1px solid rgba(255,255,255,0.57)}
+.single-price .deals h4:nth-child(1){border-top:1px solid rgba(0,0,0,0.1)}
+.single-price:hover .deals h4:nth-child(1){border-top:1px solid rgba(255,255,255,0.57)}
+.toggle,.toggler{display:inline-block;vertical-align:middle;margin:10px 10px 50px}
+.toggler{color:#000000a3;font-size:13px;line-height:3;transition:.2s}
+.b{display:block}
+.toggle{position:relative;width:43px;height:25px;border-radius:100px;background-color:#8b8fe9;overflow:hidden;box-shadow:inset 0 0 2px 1px rgba(0,0,0,0.05)}
+.check{position:absolute;display:block;cursor:pointer;top:0;left:0;width:100%;height:100%;opacity:0;z-index:6}
+.check:checked ~ .switch{right:2px;left:48%;transition:.25s cubic-bezier(0.785,0.135,0.15,0.86);transition-property:left,right;transition-delay:.08s,0}
+.switch{position:absolute;left:2px;top:2px;bottom:3px;right:48%;background-color:#fff;border-radius:36px;z-index:1;transition:.25s cubic-bezier(0.785,0.135,0.15,0.86);transition-property:left,right;transition-delay:0s,.08s;box-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.price-toggle{text-align:center}
+.deal-price.month,.deal-price.year{display:none}
+.deal-price.month.active,.deal-price.year.active{display:block}
+span.currency{font-size:x-large;font-family:Montserrat,sans-serif;vertical-align:middle}
+@media screen and (max-width: 1440px) {
+.svg{background-repeat:no-repeat;background-position:left bottom;padding:30% 0;position:static}
+}
+footer{text-align:center}
+.attribution a{color:#000;text-decoration:none}
+.attribution .fa{color:#E90606;margin:0 3px;font-size:10px;animation:pound .35s infinite alternate;-webkit-animation:pound .35s infinite alternate}
+@-webkit-keyframes pound {
+to{transform:scale(1.1)}
+}
+@keyframes pound {
+to{transform:scale(1.1)}
+}
